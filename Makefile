@@ -1,2 +1,2 @@
 all:
-	gcc ipip_py.c ipip.c -I /usr/include/python2.7  -o ipip.so -shared -fPIC
+	gcc $(pkg-config --cflags --libs python2) ipip_py.c ipip.c -o ipip.so -shared -fPIC
